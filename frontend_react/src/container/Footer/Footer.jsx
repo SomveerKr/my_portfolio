@@ -72,13 +72,13 @@ const handleSubmit=()=>{
 
         <div className='app__footer-card'> 
           <img src={images.email} alt='email' />
-          <a href='mailto:7somveerkumar@gmail.com' className='p-text '>7somveerkumar@gmail.com</a>
+          <a href='mailto:work.somveerk@gmail.com' className='p-text '>work.somveerk@gmail.com</a>
         </div>
         
-        <div className='app__footer-card'> 
+        {/* <div className='app__footer-card'> 
           <img src={images.mobile} alt='mobile' />
           <a href='tel:+91 7982577434' className='p-text '>+91 79*****434</a>
-        </div>
+        </div> */}
       </div>
 
 
