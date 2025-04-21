@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Work.scss';
 import {AiFillEye, AiFillGithub} from 'react-icons/ai';
 import {motion} from 'framer-motion';
+import ReactPaginate from 'react-paginate';
 
 import {AppWrap, MotionWrap} from '../../wrapper';
 import {urlFor, client} from '../../client';
@@ -11,6 +12,8 @@ const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
 
   //For showing opacity effect and eye + github icon Touch Devices after touch
   const [portfolioIndex, setPortfolioIndex] = useState(null);
@@ -29,6 +32,7 @@ const Work = () => {
   const handleWorkFilter=(item)=>{
     setActiveFilter(item);
     setAnimateCard([{y:100, opacity:0}]);
+    setCurrentPage(0); // Reset to first page when filter changes
 
     setTimeout(()=>{
       setAnimateCard([{y:0, opacity:1}])
@@ -40,6 +44,15 @@ const Work = () => {
       }
     }, 500);
   }
+
+  // Pagination logic
+  const pageCount = Math.ceil(filterWork.length / itemsPerPage);
+  const offset = currentPage * itemsPerPage;
+  const currentItems = filterWork.slice(offset, offset + itemsPerPage);
+
+  const handlePageClick = (event) => {
+    setCurrentPage(event.selected);
+  };
 
   //Checking Touch Device
     function isTouchDevice() {
@@ -81,7 +94,7 @@ const Work = () => {
       transition={{duration:0.5, delayChildren:0.5}}
       className='app__work-portfolio'
       >
-        {filterWork.map((work, index)=>(
+        {currentItems.map((work, index)=>(
           <div className='app__work-item app__flex' key={index}>
               <div className='app__work-img app__flex' onClick={()=>handleTouch(index)} >
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
@@ -148,6 +161,30 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
+
+      {currentItems.length > 0 ? (
+        <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        pageClassName={"pagination__page-item"}
+        pageLinkClassName={"pagination__page-link"}
+        activeClassName={"pagination__page-item--active"}
+        previousClassName={"pagination__page-item"}
+        nextClassName={"pagination__page-item"}
+        breakClassName={"pagination__page-item"}
+        disabledClassName={"pagination__page-item--disabled"}
+      />
+      ) : (
+        <div className='app__work-empty'>
+          <h2 className=''>No work found</h2>
+        </div>
+      )}
     </>
   )
 }
