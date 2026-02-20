@@ -1,0 +1,27 @@
+{
+  "name": "frontend_nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.15.0",
+    "@sanity/image-url": "^2.0.3",
+    "framer-motion": "^12.34.3",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-icons": "^5.5.0",
+    "react-paginate": "^8.3.0",
+    "react-tooltip": "^5.30.0",
+    "sass": "^1.97.3"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6"
+  }
+}
