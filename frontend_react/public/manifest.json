@@ -1,21 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Somveer Kumar",
+  "name": "Somveer Kumar - Full Stack Developer & Legal Tech Expert",
+  "description": "Portfolio of Somveer Kumar — Full Stack Web Developer, Software Engineer & Legal Tech Expert",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "type": "image/png"
     }
   ],
   "start_url": ".",

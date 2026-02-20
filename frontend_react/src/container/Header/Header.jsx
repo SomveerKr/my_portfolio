@@ -1,58 +1,66 @@
 import React from 'react';
 import './Header.scss';
-import {easeInOut, motion} from 'framer-motion';
-import {images} from '../../constants';
+import { easeInOut, motion } from 'framer-motion';
+import { images } from '../../constants';
 
-import {AppWrap} from "../../wrapper";
+import { AppWrap } from "../../wrapper";
 
-const scaleVariants={
-  whileInView:{
-    scale:[0, 1],
-    opacity:[0, 1],
-    transition:{
-      duration:1,
-      ease:'easeInOut'
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
     }
   }
 }
+
+const techSkillNames = ['JavaScript', 'React.js', 'Tailwind CSS', 'Node.js', 'Python'];
+
 const Header = () => {
   return (
-    <div className='app__header app__flex'>
+    <header className='app__header app__flex' role="banner">
       <motion.div
-        whileInView={{x:[-100, 0], opacity:[0, 1]}}
-        transition={{duration:0.5}}
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
         className='app__header-info'
       >
         <div className='app__header-badge'>
           <div className='badge-cmp app__flex'>
             <span>👋</span>
-            <div style={{marginLeft:20}}>
+            <div style={{ marginLeft: 20 }}>
               <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'>Somveer Kumar</h1>
             </div>
           </div>
 
           <div className='tag-cmp app__flex'>
-          <p className='p-text'>Full Stack</p>
-          <p className='p-text'>Web Scraping and Bots</p>
-          <p className='p-text'>Python</p>
-          
+            <p className='p-text'>Full Stack Developer</p>
+            <p className='p-text'>Web Scraping & Bots</p>
+            <p className='p-text'>Legal Tech Expert</p>
           </div>
         </div>
+
+        {/* Visually hidden SEO content — visible to crawlers, not to users */}
+        <p className='sr-only'>
+          Somveer Kumar is a Full Stack Web Developer and Legal Tech Expert based in India,
+          specializing in React, Node.js, Python, MERN stack, web scraping, and legal technology solutions.
+        </p>
       </motion.div>
 
       <motion.div
-        whileInView={{opacity:[0, 1]}}
-        transition={{duration:0.5, delayChildren:0.5}}
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
         className='app__header-img'
       >
-        <img src={images.profile} alt='profile-bg' />
+        <img src={images.profile} alt='Somveer Kumar - Full Stack Developer and Legal Tech Expert' />
         <motion.img
-          whileInView={{scale:[0, 1]}}
-          transition={{duration:1, ease:easeInOut}}
+          whileInView={{ scale: [0, 1] }}
+          transition={{ duration: 1, ease: easeInOut }}
           src={images.circle}
           className='overlay_circle'
-          alt='profile_circle'
+          alt='Decorative circle background'
         />
       </motion.div>
 
@@ -61,15 +69,15 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >
-        {[images.javascript, images.react, images.tailwind, images.node, images.python].map((circle, index)=>(
+        {[images.javascript, images.react, images.tailwind, images.node, images.python].map((circle, index) => (
           <div className=' app__flex' key={`circle-${index}`}>
-            <img src={circle} alt='circle' />
+            <img src={circle} alt={`${techSkillNames[index]} skill icon`} />
           </div>
         ))}
       </motion.div>
-    
-    
-    </div>
+
+
+    </header>
   )
 }
 
