@@ -1,6 +1,6 @@
 'use client';
 
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import { BsTwitter, BsGithub } from 'react-icons/bs';
 import { FaYoutube } from 'react-icons/fa';
 
 const SocialMedia = () => {
@@ -17,8 +17,8 @@ const SocialMedia = () => {
                 </a>
             </div>
             <div>
-                <a href='https://www.instagram.com/code.veer/' target='_blank' rel='noreferrer' aria-label='Follow Somveer Kumar on Instagram'>
-                    <BsInstagram />
+                <a href='https://github.com/SomveerKr' target='_blank' rel='noreferrer' aria-label='Follow Somveer Kumar on Github'>
+                    <BsGithub />
                 </a>
             </div>
         </div>
