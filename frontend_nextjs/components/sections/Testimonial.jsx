@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import './Testimonial.scss';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -24,7 +25,12 @@ const Testimonial = ({ testimonials = [], brands = [] }) => {
                 testimonials.length && (
                     <>
                         <div className='app__testimonial-item app__flex'>
-                            <img src={urlFor(test.imageurl)} alt='testimonial' />
+                            <Link href="https://contra.com/SomveerKumar/reviews?r=SomveerKumar"
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <img src={urlFor(test.imageurl)} alt='testimonial' />
+                            </Link>
                             <div className='app__testimonial-content'>
                                 <p className='p-text'>{test.feeback}</p>
                                 <div>
@@ -43,7 +49,7 @@ const Testimonial = ({ testimonials = [], brands = [] }) => {
                             </div>
                         </div>
 
-                        <div className='app__testimonial-brands app__flex'>
+                        {/* <div className='app__testimonial-brands app__flex'>
                             {brands.map((brand) => (
                                 <motion.div
                                     whileInView={{ opacity: [0, 1] }}
@@ -53,7 +59,7 @@ const Testimonial = ({ testimonials = [], brands = [] }) => {
                                     <img src={urlFor(brand.imgUrl)} alt={brand.name} />
                                 </motion.div>
                             ))}
-                        </div>
+                        </div> */}
                     </>
                 )
             }
