@@ -14,21 +14,7 @@ const Footer = () => {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [loding, setLoding] = useState(false);
     const [submitError, setSubmitError] = useState('');
-    const [widthOfViewport, setWidthOfViewport] = useState(0);
 
-    useEffect(() => {
-        setWidthOfViewport(window.innerWidth);
-
-        const handleResize = () => {
-            setWidthOfViewport(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     const { name, email, message } = formData;
 
@@ -50,6 +36,7 @@ const Footer = () => {
                 },
                 body: JSON.stringify({
                     access_key: process.env.NEXT_PUBLIC_W3_FORM_ACCESS_KEY,
+                    subject: `New message from "${formData.name}" — dev.somveerkumar`,
                     name: name,
                     email: email,
                     message: message,
