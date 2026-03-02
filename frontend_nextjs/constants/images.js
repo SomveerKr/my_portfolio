@@ -19,10 +19,7 @@ const images = {
     typescript: '/assets/typescript.png',
     vue: '/assets/vue.png',
     tailwind: '/assets/tailwind.png',
-    about01: '/assets/about01.png',
-    about02: '/assets/about02.png',
-    about03: '/assets/about03.png',
-    about04: '/assets/about04.png',
+    linkedin: '/assets/linkedin.png',
     profile: '/assets/profile.png',
     circle: '/assets/circle.svg',
     logo: '/assets/logo.png',
@@ -31,8 +28,6 @@ const images = {
     asus: '/assets/asus.png',
     bolt: '/assets/bolt.png',
     nb: '/assets/nb.png',
-    skype: '/assets/skype.png',
-    spotify: '/assets/spotify.png',
 };
 
 export default images;
