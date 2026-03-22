@@ -10,7 +10,7 @@ const About = ({ abouts = [] }) => {
     return (
         <>
             <h2 className='head-text'>I Build <span>Digital Solutions</span>
-                <br /> That Bridge <span>Law &amp; Technology</span>
+                <br /> That Drive <span>Growth &amp; Innovation</span>
             </h2>
             <div className='app__profiles'>
                 {abouts.map((about, index) => (

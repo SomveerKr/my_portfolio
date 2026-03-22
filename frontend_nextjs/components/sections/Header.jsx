@@ -38,13 +38,13 @@ const Header = () => {
                     <div className='tag-cmp app__flex'>
                         <p className='p-text'>Full Stack Developer</p>
                         <p className='p-text'>Web Scraping &amp; Bots</p>
-                        <p className='p-text'>Legal Tech Expert</p>
+                        <p className='p-text'>WordPress Developer</p>
                     </div>
                 </div>
 
                 <p className='sr-only'>
-                    Somveer Kumar is a Full Stack Web Developer and Legal Tech Expert based in India,
-                    specializing in React, Node.js, Python, MERN stack, web scraping, and legal technology solutions.
+                    Somveer Kumar is a Full Stack Web Developer and WordPress Developer based in India,
+                    specializing in React, Node.js, Python, MERN stack, web scraping, and WordPress solutions.
                 </p>
             </motion.div>
 

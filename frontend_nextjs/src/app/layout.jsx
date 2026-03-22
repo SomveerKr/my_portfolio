@@ -4,16 +4,16 @@ import Navbar from '@/components/Navbar/Navbar';
 
 export const metadata = {
     metadataBase: new URL('https://somveerkumar.netlify.app'),
-    title: 'Somveer Kumar | Full Stack Developer & Legal Tech Expert',
+    title: 'Somveer Kumar | Full Stack Developer & WordPress Developer',
     description:
-        'Somveer Kumar — Full Stack Web Developer, Software Engineer & Legal Tech Expert based in India. Specializing in React, Node.js, Python, MERN stack, web scraping, and legal technology solutions. View my portfolio, projects, and get in touch.',
+        'Somveer Kumar — Full Stack Web Developer, Software Engineer & WordPress Developer based in India. Specializing in React, Node.js, Python, MERN stack, web scraping, and WordPress solutions. View my portfolio, projects, and get in touch.',
     keywords: [
         'Somveer Kumar',
         'web developer',
         'software developer',
         'full stack developer',
-        'legal tech',
-        'legal technology',
+        'WordPress',
+        'WordPress solutions',
         'React developer',
         'Python developer',
         'Node.js developer',
@@ -39,15 +39,15 @@ export const metadata = {
     openGraph: {
         type: 'website',
         url: '/',
-        title: 'Somveer Kumar | Full Stack Developer & Legal Tech Expert',
+        title: 'Somveer Kumar | Full Stack Developer & WordPress Developer',
         description:
-            'Full Stack Web Developer & Legal Tech Expert. Specializing in React, Node.js, Python, MERN stack, and legal technology solutions. Explore my portfolio.',
+            'Full Stack Web Developer & WordPress Developer. Specializing in React, Node.js, Python, MERN stack, and WordPress solutions. Explore my portfolio.',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'Somveer Kumar - Full Stack Developer & Legal Tech Expert Portfolio',
+                alt: 'Somveer Kumar - Full Stack Developer & WordPress Developer Portfolio',
             },
         ],
         siteName: 'Somveer Kumar Portfolio',
@@ -55,9 +55,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Somveer Kumar | Full Stack Developer & Legal Tech Expert',
+        title: 'Somveer Kumar | Full Stack Developer & WordPress Developer',
         description:
-            'Full Stack Web Developer & Legal Tech Expert. React, Node.js, Python, MERN stack developer. View my portfolio and projects.',
+            'Full Stack Web Developer & WordPress Developer. React, Node.js, Python, MERN stack developer. View my portfolio and projects.',
         images: ['/og-image.png'],
         creator: '@Code_Veer',
     },
@@ -76,9 +76,9 @@ const jsonLdPerson = {
     name: 'Somveer Kumar',
     url: 'https://somveerkumar.netlify.app',
     image: 'https://somveerkumar.netlify.app/favicon.png',
-    jobTitle: 'Full Stack Developer & Legal Tech Expert',
+    jobTitle: 'Full Stack Developer & WordPress Developer',
     description:
-        'Full Stack Web Developer and Legal Technology Expert specializing in React, Node.js, Python, MERN stack, web scraping, and building legal tech solutions.',
+        'Full Stack Web Developer and WordPress Developer specializing in React, Node.js, Python, MERN stack, web scraping, and building WordPress solutions.',
     knowsAbout: [
         'Full Stack Web Development',
         'React.js',
@@ -87,7 +87,7 @@ const jsonLdPerson = {
         'JavaScript',
         'MERN Stack',
         'Web Scraping',
-        'Legal Technology',
+        'WordPress Solutions',
         'Software Development',
         'Next.js',
         'Tailwind CSS',
@@ -118,7 +118,7 @@ const jsonLdWebsite = {
     '@type': 'WebSite',
     name: 'Somveer Kumar Portfolio',
     url: 'https://somveerkumar.netlify.app',
-    description: 'Portfolio of Somveer Kumar — Full Stack Developer & Legal Tech Expert',
+    description: 'Portfolio of Somveer Kumar — Full Stack Developer & WordPress Developer',
     author: {
         '@type': 'Person',
         name: 'Somveer Kumar',
@@ -149,16 +149,16 @@ export default function RootLayout({ children }) {
                 {/* Noscript fallback for crawlers */}
                 <noscript>
                     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto' }}>
-                        <h1>Somveer Kumar — Full Stack Developer &amp; Legal Tech Expert</h1>
+                        <h1>Somveer Kumar — Full Stack Developer &amp; WordPress Developer</h1>
                         <p>
                             Welcome to the portfolio of <strong>Somveer Kumar</strong>, a passionate <strong>Full Stack Web Developer</strong>
-                            and <strong>Legal Technology Expert</strong> based in India.
+                            and <strong>WordPress Developer</strong> based in India.
                         </p>
                         <h2>Skills &amp; Expertise</h2>
                         <ul>
                             <li>Full Stack Web Development (React, Node.js, Express, MongoDB)</li>
                             <li>Python Development &amp; Web Scraping</li>
-                            <li>Legal Technology Solutions</li>
+                            <li>WordPress Solutions</li>
                             <li>Next.js &amp; Modern Frontend Frameworks</li>
                             <li>REST API Design &amp; Development</li>
                             <li>Bot Development &amp; Automation</li>
