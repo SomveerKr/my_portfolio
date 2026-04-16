@@ -1,6 +1,6 @@
 # 🚀 Somveer Kumar — Portfolio
 
-**Live:** [somveerkumar.netlify.app](https://somveerkumar.vercel.app)
+**Live:** [somveerkumar.vercel.app](https://somveerkumar.vercel.app)
 
 A personal developer portfolio showcasing my projects, skills, work experience, and testimonials — built with a **headless CMS architecture** using **Sanity** as the backend. Originally built with **React (CRA)**, this project is currently being **upgraded to Next.js 16** for improved performance, SEO, and server-side rendering.
 
